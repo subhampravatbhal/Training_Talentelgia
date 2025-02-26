@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": 4,
+      "name": "Subham Pravat bhal",
+      "email": "subhambhal56@gmail.com",
+      "password": "ddd",
+      "address": {
+        "city": "Bhubaneshwar"
+      },
+      "role": "Customer",
+      "phone": "6372787006",
+      "company": {
+        "website": "hshssh.com",
+        "name": "odisha"
+      }
+    },
+    {
+      "id": 0,
+      "name": "Subham Pravat bhal",
+      "email": "subhambhal56@gmail.com",
+      "password": "sssss",
+      "address": {
+        "city": "Bhubaneshwar"
+      },
+      "pincode": "754211",
+      "street": "Ghagara,gajanga, Kendrapara",
+      "phone": "6372787006",
+      "company": {
+        "website": "amazon.com",
+        "name": "odisha"
+      }
+    }
+  ]
+}
