@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": "1740675277502",
+      "name": "Subham Pravat bhal",
+      "email": "subhambhal56@gmail.com",
+      "password": "Subham@1656",
+      "address": {
+        "city": "Bhubaneshwar"
+      },
+      "pincode": "754211",
+      "street": "Ghagara,gajanga, Kendrapara",
+      "phone": "6372787006",
+      "company": {
+        "website": "subham.com",
+        "name": "odishaa"
+      }
+    },
+    {
+      "id": "1740974607222",
+      "name": "subham",
+      "email": "subham@gmail.com",
+      "password": "Subham@1656",
+      "address": {
+        "city": "Bhubaneshwar"
+      },
+      "pincode": "754211",
+      "street": "Bhubaneshwar",
+      "phone": "6372787006",
+      "company": {
+        "website": "rr.com",
+        "name": "wesite"
+      }
+    },
+    {
+      "id": "1741147700552",
+      "name": "subham",
+      "email": "subham@gmail.com",
+      "password": "Subham@1656",
+      "address": {
+        "city": "kendrapara ,odisha"
+      },
+      "pincode": "754211",
+      "street": "Bhubaneshwar",
+      "phone": "9337313602",
+      "company": {
+        "website": "subham.com",
+        "name": "wesitefff"
+      }
+    }
+  ]
+}
