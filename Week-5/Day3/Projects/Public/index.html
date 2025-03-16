@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white flex justify-center items-center h-screen">
+  <div class="bg-gray-800 p-6 rounded-lg w-[90%] max-w-4xl shadow-xl">
+    <div class="flex justify-between items-center mb-4">
+      <!-- <button class="bg-gray-700 px-4 py-2 rounded-full">Light Mode</button> -->
+      <input type="search" placeholder="Search for your preferred city..."
+        class="px-4 py-2 w-2/3 rounded-lg bg-gray-700 text-white outline-none" style="margin-left: 15%;" id="city">
+      <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-gray-700 p-6 rounded-lg text-center">
+        <h2 class="text-xl font-bold"><span id="cityName">Athens</span></h2>
+        <p class="text-4xl font-semibold"><span id="time">09:03</span></p>
+        <p class="text-sm"><span id="date">Thursday, 31 Aug</span></p>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-lg">
+        <div class="flex justify-between items-center">
+          <div>
+            <h2 class="text-3xl font-bold"><span id="temp">24°C</span></h2>
+            <p>Feels like:<span id="feels_like"> 22°C</span></p>
+          </div>
+          <div class="text-4xl">☀️
+            <p style="font-size: 17px;">sunrise <span id="sunrise"></span></p>
+            <p style="font-size: 17px;">sunset <span id="sunset"></span></p>
+          </div>
+          
+          
+          
+          
+          
+        </div>
+        <p class="mt-2">Sunny</p>
+        <div class="flex justify-between text-sm mt-4">
+          <p>Humidity:<span id="humidity">41%</span></p>
+          <p>Wind:<span id="wind_speed">2km/h</span> </p>
+          <p>Pressure:<span id="pressure">997hPa</span></p>
+          <p>UV: <span id="uv"> 8</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 mt-6">
+      <div class="bg-gray-700 p-4 rounded-lg">
+        <h3 class="font-bold mb-2">5 Days Forecast:</h3>
+        <ul class="text-sm space-y-2">
+          <li>🌥️ 20°C - Friday, 1 Sep</li>
+          <li>⛅ 22°C - Saturday, 2 Sep</li>
+          <li>☀️ 27°C - Sunday, 3 Sep</li>
+          <li>🌧️ 18°C - Monday, 4 Sep</li>
+          <li>🌫️ 16°C - Tuesday, 5 Sep</li>
+        </ul>
+      </div>
+      <div class="bg-gray-700 p-4 rounded-lg">
+        <h3 class="font-bold mb-2">Hourly Forecast:</h3>
+        <div class="grid grid-cols-5 text-center text-sm">
+          <div>☀️ 12:00<br>26°C <br>3km/h</div>
+          <div>☀️ 15:00<br>27°C <br>2km/h</div>
+          <div>⛅ 18:00<br>27°C <br>2km/h</div>
+          <div>🌥️ 21:00<br>25°C <br>3km/h</div>
+          <div>🌙 00:00<br>22°C <br>3km/h</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/index.js"></script>
+</body>
+
+</html>
