@@ -12,7 +12,6 @@ if (form) {
         const ConformPassword = document.getElementById("Emp_conf_pass").value.trim();
         const Role = document.getElementById('role').value;
         
-
         // Validate input fields (Basic)
         if (!FirstName || !LastName || !Email || !Password || !ConformPassword || !Role) {
             alert("All fields are required!");
