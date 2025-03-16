@@ -1,0 +1,35 @@
+.col .card .card-header 
+{
+    background-color:#0d6efd;
+
+}
+#col1 #card1 #card-header1 
+{
+    /* background-color:rgba(236, 122, 73, 0.947); */
+}
+.col .card{
+    border-color:rgba(59, 78, 247, 0.947);
+}
+.col .card .card-header h4 {
+    color: white;
+}
+.list-unstyled li{
+    color: white;
+
+} 
+.card-header
+{
+    background-color: aquamarine;
+}
+.col .card{
+    background-image: url(../img/tahmid-tazwar-GU-0RMBn078-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    backface-visibility: visible;
+    width: 100%;
+    background-size: cover;
+}
+#weather_img{
+height: 350px;
+width: 900px;
+}
