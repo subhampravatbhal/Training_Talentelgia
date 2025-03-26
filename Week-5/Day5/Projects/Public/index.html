@@ -1,78 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/index.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  
+
+
+
 </head>
 
 <body class="bg-gray-900 text-white flex justify-center items-center h-screen">
-  <div class="bg-gray-800 p-6 rounded-lg w-[90%] max-w-4xl shadow-xl">
-    <div class="flex justify-between items-center mb-4">
-      <!-- <button class="bg-gray-700 px-4 py-2 rounded-full">Light Mode</button> -->
-      <input type="search" placeholder="Search for your preferred city..."
-        class="px-4 py-2 w-2/3 rounded-lg bg-gray-700 text-white outline-none" style="margin-left: 15%;" id="city">
-      <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+  <div class="bg-gray-800 p-6 rounded-lg w-[90%] max-w-4xl shadow-xl relative">
 
+
+
+
+    <div class="flex justify-between items-center mb-4">
+
+      <div class="relative flex items-center w-2/3 mx-auto" id="input_button">
+        <input type="search" placeholder="Search for your preferred city..."
+          class="px-4 py-2 w-full rounded-lg bg-gray-700 outline-none" id="city">
+        <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+      
+
+      
+      
     </div>
+      <!-- wishlist logo -->
+    <svg id="wishlist" class="w-6 h-6 text-gray-800 dark:text-white mx-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" >
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
+    </svg>
+
+    <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm 
+      px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" style="font-size: 22px;"><span id="User_char">S</span><svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+      </svg>
+    </button>
+
+    <!-- Dropdown menu -->
+    <div id="multi-dropdown"
+      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="multiLevelDropdownButton">
+      <li></li>
+        <a href="#" id="user_profile" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+        <i class="fas fa-heart"></i> User
+        </a>
+        <span id="user_email" style="color: rgb(21,109,240); font-weight: bolder;"></span>
+      </li>
+      <li>
+        <a href="#" id="wishlistButton"
+        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+        WishList
+        </a>
+        <span id="serch_iteam" style="color: gold; cursor: pointer;"></span>
+        
+      </li>
+      <li>
+        <a href="#" id="logoutButton"  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+        <i class="fas fa-heart"></i> LogOut
+        </a>
+      </li>
+      </ul>
+    </div>
+  </div>
+
 
     <div class="grid grid-cols-2 gap-4">
       <div class="bg-gray-700 p-6 rounded-lg text-center">
         <h2 class="text-xl font-bold"><span id="cityName">Athens</span></h2>
         <p class="text-4xl font-semibold"><span id="time">09:03</span></p>
         <p class="text-sm"><span id="date">Thursday, 31 Aug</span></p>
+        <div class="text-4xl">☀️</div>
+        <p class="mt-2 text-center font-bold"><span id="sunny">sunny</span></p>
+        </p>
       </div>
       <div class="bg-gray-700 p-6 rounded-lg">
         <div class="flex justify-between items-center">
-          <div>
-            <h2 class="text-3xl font-bold"><span id="temp">24°C</span></h2>
-            <p>Feels like:<span id="feels_like"> 22°C</span></p>
+          <div id="Temprature">
+            <h2 class="text-3xl font-bold"><span id="temp" style="font-size: 45px;">24°C</span></h2>
+            <p style="font-size: 18px; color: white; width:auto;">Feels like:<span id="feels_like"
+                style="font-size:25px; font-weight: bolder;"> 22°C</span></p>
+
           </div>
-          <div class="text-4xl">☀️
-            <p style="font-size: 17px;">sunrise <span id="sunrise"></span></p>
-            <p style="font-size: 17px;">sunset <span id="sunset"></span></p>
+
+
+
+
+          <div id="box_2" class="flex justify-between text-sm mt-4" style="display: block;">
+            <p>Humidity:<span id="humidity">41%</span></p>
+            <p>Wind:<span id="wind_speed">2km/h</span></p>
+            <p>Pressure:<span id="pressure">997hPa</span></p>
+            <p>UV: <span id="uv">8</span></p>
           </div>
-          
-          
-          
-          
-          
+
+
         </div>
-        <p class="mt-2">Sunny</p>
-        <div class="flex justify-between text-sm mt-4">
-          <p>Humidity:<span id="humidity">41%</span></p>
-          <p>Wind:<span id="wind_speed">2km/h</span> </p>
-          <p>Pressure:<span id="pressure">997hPa</span></p>
-          <p>UV: <span id="uv"> 8</span></p>
+
+        <div class="sun">
+          <p style="font-size: 17px;">sunrise <span id="sunrise"></span></p>
+          <p style="font-size: 17px;">sunset <span id="sunset"></span></p>
         </div>
       </div>
+
     </div>
 
     <div class="grid grid-cols-2 gap-4 mt-6">
       <div class="bg-gray-700 p-4 rounded-lg">
-        <h3 class="font-bold mb-2">5 Days Forecast:</h3>
-        <ul class="text-sm space-y-2">
-          <li>🌥️ 20°C - Friday, 1 Sep</li>
-          <li>⛅ 22°C - Saturday, 2 Sep</li>
-          <li>☀️ 27°C - Sunday, 3 Sep</li>
-          <li>🌧️ 18°C - Monday, 4 Sep</li>
-          <li>🌫️ 16°C - Tuesday, 5 Sep</li>
-        </ul>
+        <h3 class="font-bold mb-2" id="fiveDayForecast">5 Days Forecast:</h3>
+        <div class="text-sm space-y-2">
+          <p id="day1" class="forecast-day">
+            <span class="weather-icon">🌥️</span>
+            <span class="temperature" id="temp-day1">20°C</span> - 
+            <span class="date" id="date-day1">Friday, 1 Sep</span>
+          </p>
+          <p id="day2" class="forecast-day">
+            <span class="weather-icon">⛅</span>
+            <span class="temperature" id="temp-day2">22°C</span> - 
+            <span class="date" id="date-day2">Saturday, 2 Sep</span>
+          </p>
+          <p id="day3" class="forecast-day">
+            <span class="weather-icon">☀️</span>
+            <span class="temperature" id="temp-day3">27°C</span> - 
+            <span class="date" id="date-day3">Sunday, 3 Sep</span>
+          </p>
+          <p id="day4" class="forecast-day">
+            <span class="weather-icon">🌧️</span>
+            <span class="temperature" id="temp-day4">18°C</span> - 
+            <span class="date" id="date-day4">Monday, 4 Sep</span>
+          </p>
+          <p id="day5" class="forecast-day">
+            <span class="weather-icon">🌫️</span>
+            <span class="temperature" id="temp-day5">16°C</span> - 
+            <span class="date" id="date-day5">Tuesday, 5 Sep</span>
+          </p>
+        </div>
       </div>
+      
       <div class="bg-gray-700 p-4 rounded-lg">
-        <h3 class="font-bold mb-2">Hourly Forecast:</h3>
+        <h3 class="font-bold mb-2" id="hourlyForecast">Hourly Forecast:</h3>
         <div class="grid grid-cols-5 text-center text-sm">
-          <div>☀️ 12:00<br>26°C <br>3km/h</div>
-          <div>☀️ 15:00<br>27°C <br>2km/h</div>
-          <div>⛅ 18:00<br>27°C <br>2km/h</div>
-          <div>🌥️ 21:00<br>25°C <br>3km/h</div>
-          <div>🌙 00:00<br>22°C <br>3km/h</div>
+          <p id="hour1" class="hourly-data">
+            <span class="weather-icon">☀️</span> 
+            <span class="time" id="time-hour1">12:00</span><br>
+            <span class="temperature" id="temp-hour1">26°C</span> <br>
+            <span class="wind-speed" id="wind-hour1">3km/h</span>
+          </p>
+          <p id="hour2" class="hourly-data">
+            <span class="weather-icon">☀️</span> 
+            <span class="time" id="time-hour2">15:00</span><br>
+            <span class="temperature" id="temp-hour2">27°C</span> <br>
+            <span class="wind-speed" id="wind-hour2">2km/h</span>
+          </p>
+          <p id="hour3" class="hourly-data">
+            <span class="weather-icon">⛅</span> 
+            <span class="time" id="time-hour3">18:00</span><br>
+            <span class="temperature" id="temp-hour3">27°C</span> <br>
+            <span class="wind-speed" id="wind-hour3">2km/h</span>
+          </p>
+          <p id="hour4" class="hourly-data">
+            <span class="weather-icon">🌥️</span> 
+            <span class="time" id="time-hour4">21:00</span><br>
+            <span class="temperature" id="temp-hour4">25°C</span> <br>
+            <span class="wind-speed" id="wind-hour4">3km/h</span>
+          </p>
+          <p id="hour5" class="hourly-data">
+            <span class="weather-icon">🌙</span> 
+            <span class="time" id="time-hour5">00:00</span><br>
+            <span class="temperature" id="temp-hour5">22°C</span> <br>
+            <span class="wind-speed" id="wind-hour5">3km/h</span>
+          </p>
         </div>
       </div>
     </div>
+    
   </div>
+
+
+
+
+  </script>
+
   <script src="../js/index.js"></script>
+
+
 </body>
 
 </html>
