@@ -1,15 +1,20 @@
 {
   "users": [
     {
-      "id": "7e9f",
+      "id": "0a81",
       "username": "Renuka",
-      "email": "subham@gmail.com",
-      "password": "1234"
+      "email": "subhambhal56@gmail.com",
+      "password": "Subham@1656",
+      "wishlist": []
     },
     {
-      "id": "4e59",
-      "identifier": "subham@gmail.com",
-      "password": "1234"
+      "id": "4e2a",
+      "username": "Jitu@12",
+      "email": "Jitendra34@gmail.com",
+      "password": "Jitu@123",
+      "wishlist": [
+        "Kendrapara"
+      ]
     }
   ]
 }

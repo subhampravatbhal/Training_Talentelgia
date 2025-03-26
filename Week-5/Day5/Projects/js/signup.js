@@ -49,3 +49,34 @@
 //             form.reset();
 //         })
 //     })}
+
+// var a = 15
+// function example() {
+//   console.log("Example function")
+//   console.log(a)
+//   var a = 10;
+//   console.log("Example function end")
+// }
+
+// console.log("Before calling example function")
+// example()
+ 
+
+// setTimeout(() => {
+//     console.log("timeout 1")
+//   })
+  
+//   console.log("before timeout")
+  
+//   setTimeout(() => {
+//     console.log("timeout 2")
+//   }, 1000)
+  
+//   console.log("After timeout")
+
+//   let a=10,b=20;
+//   a=a+b;//30
+//   b=a-b;//10
+//   a=a-b//20
+//   console.log(a);
+//   console.log(b);
